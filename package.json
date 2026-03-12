@@ -25,7 +25,6 @@
 		"@fortawesome/free-solid-svg-icons": "^7.2.0",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"greset": "^2.0.0",
-		"kebab-case": "^2.0.2",
 		"sass": "^1.98.0",
 		"svelte-fa": "^4.0.4"
 	}
