@@ -7,44 +7,43 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@fortawesome/free-solid-svg-icons':
         specifier: ^7.2.0
         version: 7.2.0
-      greset:
-        specifier: ^2.0.0
-        version: 2.0.0
-      kebab-case:
-        specifier: ^2.0.2
-        version: 2.0.2
-      sass:
-        specifier: ^1.98.0
-        version: 1.98.0
-      svelte-fa:
-        specifier: ^4.0.4
-        version: 4.0.4(svelte@5.53.11)
-    devDependencies:
-      '@sveltejs/adapter-auto':
-        specifier: ^7.0.0
-        version: 7.0.1(@sveltejs/kit@2.54.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.53.11)(vite@7.3.1(sass@1.98.0)))(svelte@5.53.11)(typescript@5.9.3)(vite@7.3.1(sass@1.98.0)))
+      '@sveltejs/adapter-static':
+        specifier: ^3.0.10
+        version: 3.0.10(@sveltejs/kit@2.54.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.53.11)(vite@7.3.1(sass@1.98.0)))(svelte@5.53.11)(typescript@5.9.3)(vite@7.3.1(sass@1.98.0)))
       '@sveltejs/kit':
         specifier: ^2.50.2
         version: 2.54.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.53.11)(vite@7.3.1(sass@1.98.0)))(svelte@5.53.11)(typescript@5.9.3)(vite@7.3.1(sass@1.98.0))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^6.2.4
         version: 6.2.4(svelte@5.53.11)(vite@7.3.1(sass@1.98.0))
+      greset:
+        specifier: ^2.0.0
+        version: 2.0.0
+      kebab-case:
+        specifier: ^2.0.2
+        version: 2.0.2
       prettier:
         specifier: ^3.8.1
         version: 3.8.1
       prettier-plugin-svelte:
         specifier: ^3.4.1
         version: 3.5.1(prettier@3.8.1)(svelte@5.53.11)
+      sass:
+        specifier: ^1.98.0
+        version: 1.98.0
       svelte:
         specifier: ^5.51.0
         version: 5.53.11
       svelte-check:
         specifier: ^4.4.2
         version: 4.4.5(picomatch@4.0.3)(svelte@5.53.11)(typescript@5.9.3)
+      svelte-fa:
+        specifier: ^4.0.4
+        version: 4.0.4(svelte@5.53.11)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -452,8 +451,8 @@ packages:
     peerDependencies:
       acorn: ^8.9.0
 
-  '@sveltejs/adapter-auto@7.0.1':
-    resolution: {integrity: sha512-dvuPm1E7M9NI/+canIQ6KKQDU2AkEefEZ2Dp7cY6uKoPq9Z/PhOXABe526UdW2mN986gjVkuSLkOYIBnS/M2LQ==}
+  '@sveltejs/adapter-static@3.0.10':
+    resolution: {integrity: sha512-7D9lYFWJmB7zxZyTE/qxjksvMqzMuYrrsyh1f4AlZqeZeACPRySjbC3aFiY55wb1tWUaKOQG9PVbm74JcN2Iew==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
@@ -995,7 +994,7 @@ snapshots:
     dependencies:
       acorn: 8.16.0
 
-  '@sveltejs/adapter-auto@7.0.1(@sveltejs/kit@2.54.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.53.11)(vite@7.3.1(sass@1.98.0)))(svelte@5.53.11)(typescript@5.9.3)(vite@7.3.1(sass@1.98.0)))':
+  '@sveltejs/adapter-static@3.0.10(@sveltejs/kit@2.54.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.53.11)(vite@7.3.1(sass@1.98.0)))(svelte@5.53.11)(typescript@5.9.3)(vite@7.3.1(sass@1.98.0)))':
     dependencies:
       '@sveltejs/kit': 2.54.0(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.53.11)(vite@7.3.1(sass@1.98.0)))(svelte@5.53.11)(typescript@5.9.3)(vite@7.3.1(sass@1.98.0))
 
