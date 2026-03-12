@@ -1,4 +1,29 @@
+:root {
+	--bg: #1f1e2e;
+}
+
 body {
-	background-color: #1f1e2e;
+	background-color: var(--bg);
+	overflow: hidden;
 	color: white;
+}
+
+button,
+a {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background-color: var(--bg);
+	width: fit-content;
+	transition: background-color 250ms ease;
+	color: inherit;
+	font-size: 20px;
+	border-radius: 10px;
+	border: 3px solid #c6a0f6;
+	padding: 10px 15px;
+
+	&:hover,
+	&.active {
+		background-color: #c6a0f6;
+	}
 }
