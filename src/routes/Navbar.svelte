@@ -5,6 +5,8 @@
 	import { watch } from "runed";
 	import Fa from "svelte-fa";
 	import { onNavigate } from "$app/navigation";
+	import { PUBLIC_EXTRA_URL } from "$env/static/public";
+	import { browser } from "$app/environment";
 
 	let navbarWidth: number = $state(0);
 	let windowWidth: number = $state(0);
@@ -18,7 +20,10 @@
 	watch(
 		() => windowWidth,
 		() => {
-			mobile = windowWidth < navbarWidth;
+			mobile = false;
+			requestAnimationFrame(() => {
+				mobile = windowWidth < navbarWidth;
+			});
 		},
 	);
 </script>
@@ -39,14 +44,23 @@
 				{iframe.label}
 			</a>
 		{/each}
+		{#if PUBLIC_EXTRA_URL && !mobile && browser}
+			{#await fetch(PUBLIC_EXTRA_URL) then response}
+				{#await response.text() then text}
+					<div class="extra">{text}</div>
+				{/await}
+			{/await}
+		{/if}
 	</nav>
 {/if}
 
 <style lang="scss">
 	nav {
-		width: fit-content;
+		min-width: fit-content;
+		align-items: center;
 		display: flex;
 		padding: 10px;
+		width: 100%;
 		gap: 10px;
 	}
 
@@ -71,5 +85,10 @@
 		z-index: 10;
 		right: 10px;
 		top: 10px;
+	}
+
+	.extra {
+		padding-right: 10px;
+		margin-left: auto;
 	}
 </style>
