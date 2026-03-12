@@ -5,9 +5,6 @@ const toSlug = (value: string): string => {
 	const slug = value
 		.normalize("NFKD")
 		.replace(/\p{M}+/gu, "")
-		// Split camelCase, PascalCase, and acronym boundaries into words.
-		.replace(/([\p{Ll}\p{N}])(\p{Lu})/gu, "$1 $2")
-		.replace(/(\p{Lu})(\p{Lu}\p{Ll})/gu, "$1 $2")
 		.toLowerCase()
 		// Keep IDs filesystem and URL safe (a-z, 0-9, and dashes only).
 		.replace(/[^a-z0-9]+/g, "-")
