@@ -17,9 +17,13 @@
 	nav {
 		display: flex;
 		padding: 10px;
+		gap: 10px;
 	}
 
 	a {
+		display: flex;
+		align-items: center;
+		gap: 10px;
 		transition: background-color 250ms ease;
 		color: inherit;
 		font-size: 20px;
